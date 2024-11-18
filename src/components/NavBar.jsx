@@ -1,16 +1,18 @@
-import { useState } from "react";
+import { useContext, useState } from "react";
 import { FaBars, FaHome, FaTags, FaUser } from "react-icons/fa";
 import { Link, NavLink } from "react-router-dom";
 import Drawer from "react-modern-drawer";
 import "react-modern-drawer/dist/index.css";
 import "./NavBar.css";
 import { IoClose } from "react-icons/io5";
+import { AuthContext } from "../provider/AuthDataProvider";
 
 const NavBar = () => {
    const [isOpen, setIsOpen] = useState(false);
    const toggleDrawer = () => {
       setIsOpen((prevState) => !prevState);
    };
+   const { user } = useContext(AuthContext);
    return (
       <nav className='flex items-center justify-between py-4 border-b w-11/12 max-w-7xl mx-auto'>
          <div className='font-bold text-2xl'>
@@ -26,17 +28,23 @@ const NavBar = () => {
             <NavLink to='/brands' className='flex items-center space-x-1'>
                <FaTags /> <span>Brands</span>
             </NavLink>
-            <NavLink to='/profile' className='flex items-center space-x-1'>
-               <FaUser /> <span>My Profile</span>
-            </NavLink>
+            {user ? (
+               <NavLink to='/profile' className='flex items-center space-x-1'>
+                  <FaUser /> <span>My Profile</span>
+               </NavLink>
+            ) : null}
          </div>
 
          <div className='hidden md:block'>
-            <Link to='/auth/login'>
-               <button className='bg-brown text-white px-4 py-2 rounded-md hover:bg-brown-dark'>
-                  Login
-               </button>
-            </Link>
+            {user ? (
+               user.email
+            ) : (
+               <Link to='/auth/login'>
+                  <button className='bg-brown text-white px-4 py-2 rounded-md hover:bg-brown-dark'>
+                     Login
+                  </button>
+               </Link>
+            )}
          </div>
 
          {/* --------------- for Mobile Devices --------------- */}
