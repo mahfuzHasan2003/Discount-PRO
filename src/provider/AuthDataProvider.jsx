@@ -5,6 +5,7 @@ import {
    onAuthStateChanged,
    signInWithEmailAndPassword,
    signInWithPopup,
+   signOut,
    updateProfile,
 } from "firebase/auth";
 import { auth } from "../firebase/firebase.init";
@@ -30,6 +31,10 @@ const AuthDataProvider = ({ children }) => {
       return signInWithPopup(auth, googleProvider);
    };
    const updateUserProfile = (obj) => updateProfile(auth.currentUser, obj);
+   const logOutUser = () => {
+      setLoading(true);
+      return signOut(auth);
+   };
 
    // ------------ Auth Observer ----------
    useEffect(() => {
@@ -47,6 +52,7 @@ const AuthDataProvider = ({ children }) => {
       loading,
       signInWithGoogle,
       updateUserProfile,
+      logOutUser,
    };
    return (
       <AuthContext.Provider value={authData}>{children}</AuthContext.Provider>

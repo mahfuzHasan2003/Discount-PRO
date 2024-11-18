@@ -64,7 +64,7 @@ const Login = () => {
                className='placeholder-inherit bg-brown font-bold text-white w-full p-2 rounded-sm cursor-pointer'
             />
             {error && (
-               <p className='text-red-800 text-center text-sm animate__animated animate__shakeX animate__fast'>
+               <p className='text-red-800 text-center text-sm animate__animated animate__headShake animate__fast'>
                   {error}
                </p>
             )}
@@ -73,7 +73,7 @@ const Login = () => {
                <Link
                   to='/auth/register'
                   className='text-blue-700 underline font-medium ml-1'>
-                  Create one
+                  Register
                </Link>
             </p>
          </form>
