@@ -1,0 +1,4 @@
+.css-1oljykh-MuiDivider-root::before,
+.css-1oljykh-MuiDivider-root::after {
+   border-top: 1px solid #2e3d52 !important;
+}
