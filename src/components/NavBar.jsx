@@ -63,7 +63,7 @@ const NavBar = () => {
             )}
          </div>
 
-         {/* --------------- for Mobile Devices --------------- */}
+         {/* --------------- Drawer Mobile Devices --------------- */}
          <div className='md:hidden flex-grow place-items-end'>
             <FaBars onClick={toggleDrawer} size={25} />
          </div>

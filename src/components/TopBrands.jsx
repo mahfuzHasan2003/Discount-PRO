@@ -1,6 +1,7 @@
 import { useContext } from "react";
 import Marquee from "react-fast-marquee";
 import { BrandsContext } from "../provider/BrandsDataProvider";
+import { Link } from "react-router-dom";
 
 const TopBrands = () => {
    const { allBrandsData } = useContext(BrandsContext);
@@ -16,12 +17,13 @@ const TopBrands = () => {
          </p>
          <Marquee pauseOnHover>
             {allBrandsData.map((singleBrand) => (
-               <img
-                  key={singleBrand._id}
-                  src={singleBrand.brand_logo}
-                  alt={singleBrand.brand_name}
-                  className='h-20 mr-5'
-               />
+               <Link to={`/brand/${singleBrand._id}`} key={singleBrand._id}>
+                  <img
+                     src={singleBrand.brand_logo}
+                     alt={singleBrand.brand_name}
+                     className='h-20 mr-5'
+                  />
+               </Link>
             ))}
          </Marquee>
       </section>

@@ -5,6 +5,7 @@ import { RouterProvider } from "react-router-dom";
 import routes from "./routes/routes";
 import BrandsDataProvider from "./provider/BrandsDataProvider";
 import AuthDataProvider from "./provider/AuthDataProvider";
+import "@smastrom/react-rating/style.css";
 
 import "animate.css";
 

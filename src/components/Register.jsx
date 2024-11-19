@@ -6,7 +6,7 @@ import { useContext, useState } from "react";
 import { AuthContext } from "../provider/AuthDataProvider";
 
 const Register = () => {
-   const { setUser, registerWithEmail, signInWithGoogle, updateUserProfile } =
+   const { registerWithEmail, signInWithGoogle, updateUserProfile } =
       useContext(AuthContext);
    const navigate = useNavigate();
    const emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
@@ -40,7 +40,7 @@ const Register = () => {
          return;
       }
       registerWithEmail(email, password)
-         .then((result) => {
+         .then(() => {
             e.target.reset();
             updateUserProfile({ displayName: name, photoURL: photoURL })
                .then(() => navigate("/"))
@@ -50,7 +50,7 @@ const Register = () => {
    };
    const handleGoogleSignIn = () => {
       signInWithGoogle()
-         .then((result) => navigate("/"))
+         .then(() => navigate("/"))
          .catch((error) => setError(error.code));
    };
 

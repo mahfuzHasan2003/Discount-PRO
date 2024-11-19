@@ -1,5 +1,5 @@
 import { Divider } from "@mui/material";
-import { Link, useNavigate } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import googleLogo from "../assets/google.png";
 import "./Divider.css";
 import { useContext, useState } from "react";
@@ -7,8 +7,10 @@ import { AuthContext } from "../provider/AuthDataProvider";
 
 const Login = () => {
    const [error, setError] = useState(null);
-   const { setUser, signInWithEmail, signInWithGoogle } =
-      useContext(AuthContext);
+   const { signInWithEmail, signInWithGoogle } = useContext(AuthContext);
+   const { state } = useLocation();
+
+   const userDestination = state || "/";
    const navigate = useNavigate();
 
    const handleLogin = (e) => {
@@ -25,15 +27,15 @@ const Login = () => {
          return;
       }
       signInWithEmail(email, password)
-         .then((result) => {
+         .then(() => {
             e.target.reset();
-            navigate("/");
+            navigate(userDestination);
          })
          .catch((error) => setError(error.code));
    };
    const handleGoogleSignIn = () => {
       signInWithGoogle()
-         .then((result) => navigate("/"))
+         .then(() => navigate(userDestination))
          .catch((error) => setError(error.code));
    };
    return (

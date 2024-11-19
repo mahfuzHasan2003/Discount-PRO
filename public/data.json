@@ -1,6 +1,6 @@
 [
    {
-      "_id": "a7!u76@1",
+      "_id": "AbCdEfGh",
       "brand_name": "ShopX",
       "rating": 4.5,
       "description": "Leading online store offering quality products across all categories.",
@@ -12,6 +12,34 @@
             "expiry_date": "2024-12-31",
             "condition": "Minimum purchase of $50",
             "coupon_type": "percentage"
+         },
+         {
+            "coupon_code": "SHOPX20",
+            "description": "20% off on selected items",
+            "expiry_date": "2025-01-15",
+            "condition": "Applicable only on fashion and accessories",
+            "coupon_type": "percentage"
+         },
+         {
+            "coupon_code": "FREESHIP",
+            "description": "Free shipping on orders over $30",
+            "expiry_date": "2025-02-28",
+            "condition": "Valid on standard shipping only",
+            "coupon_type": "shipping"
+         },
+         {
+            "coupon_code": "SHOPXBOGO",
+            "description": "Buy one get one free on select items",
+            "expiry_date": "2024-12-25",
+            "condition": "Valid on selected categories only",
+            "coupon_type": "bogo"
+         },
+         {
+            "coupon_code": "WELCOME5",
+            "description": "Save $5 on your first purchase",
+            "expiry_date": "2025-03-31",
+            "condition": "Minimum purchase of $30",
+            "coupon_type": "amount"
          }
       ],
       "shop_Link": "https://shopx.com",
@@ -19,7 +47,7 @@
       "isSaleOn": true
    },
    {
-      "_id": "7y#9e4*d",
+      "_id": "QwErTyUi",
       "brand_name": "BeautyMart",
       "rating": 4.7,
       "description": "Top-notch beauty products for all your needs.",
@@ -31,6 +59,27 @@
             "expiry_date": "2024-12-15",
             "condition": "Applicable on orders above $30",
             "coupon_type": "percentage"
+         },
+         {
+            "coupon_code": "FRESH15",
+            "description": "15% off on all hair care items",
+            "expiry_date": "2025-01-10",
+            "condition": "No minimum purchase required",
+            "coupon_type": "percentage"
+         },
+         {
+            "coupon_code": "BEAUTYSHIP",
+            "description": "Free shipping on orders over $40",
+            "expiry_date": "2025-02-28",
+            "condition": "Only applicable within the US",
+            "coupon_type": "shipping"
+         },
+         {
+            "coupon_code": "LUXE5",
+            "description": "Save $5 on luxury makeup items",
+            "expiry_date": "2024-12-31",
+            "condition": "Minimum purchase of $50",
+            "coupon_type": "amount"
          }
       ],
       "shop_Link": "https://beautymart.com",
@@ -38,7 +87,7 @@
       "isSaleOn": false
    },
    {
-      "_id": "qw87$d#3",
+      "_id": "AsDfGhJk",
       "brand_name": "BookBazaar",
       "rating": 4.2,
       "description": "Find all genres of books at affordable prices.",
@@ -57,7 +106,7 @@
       "isSaleOn": true
    },
    {
-      "_id": "jk%8*hj1",
+      "_id": "ZxCvBnMq",
       "brand_name": "StyleWave",
       "rating": 4.6,
       "description": "Latest fashion trends at unbeatable prices.",
@@ -69,6 +118,20 @@
             "expiry_date": "2024-12-10",
             "condition": "Minimum order of $50",
             "coupon_type": "percentage"
+         },
+         {
+            "coupon_code": "STYLE15",
+            "description": "15% off on accessories",
+            "expiry_date": "2025-01-05",
+            "condition": "No minimum purchase required",
+            "coupon_type": "percentage"
+         },
+         {
+            "coupon_code": "NEWYEAR20",
+            "description": "20% off on all winter wear",
+            "expiry_date": "2025-01-15",
+            "condition": "Valid only on winter apparel",
+            "coupon_type": "percentage"
          }
       ],
       "shop_Link": "https://stylewave.com",
@@ -76,7 +139,7 @@
       "isSaleOn": true
    },
    {
-      "_id": "7@ka5$4*",
+      "_id": "PoLiKmNj",
       "brand_name": "TechMart",
       "rating": 4.4,
       "description": "Top tech gadgets and accessories at great prices.",
@@ -88,6 +151,13 @@
             "expiry_date": "2024-12-30",
             "condition": "Minimum purchase of $100",
             "coupon_type": "percentage"
+         },
+         {
+            "coupon_code": "GADGET20",
+            "description": "20% off on selected gadgets",
+            "expiry_date": "2025-01-20",
+            "condition": "Valid only on selected products",
+            "coupon_type": "percentage"
          }
       ],
       "shop_Link": "https://techmart.com",
@@ -95,7 +165,7 @@
       "isSaleOn": false
    },
    {
-      "_id": "l3%nh*#1",
+      "_id": "YuIoPqWe",
       "brand_name": "HomeEssentials",
       "rating": 4.1,
       "description": "Quality home products for every need.",
@@ -107,6 +177,34 @@
             "expiry_date": "2024-11-30",
             "condition": "Minimum order of $200",
             "coupon_type": "percentage"
+         },
+         {
+            "coupon_code": "ESSENTIALS10",
+            "description": "10% off on home decor products",
+            "expiry_date": "2025-01-15",
+            "condition": "No minimum purchase required",
+            "coupon_type": "percentage"
+         },
+         {
+            "coupon_code": "FURNITURE50",
+            "description": "Save $50 on furniture orders over $500",
+            "expiry_date": "2025-02-28",
+            "condition": "Minimum purchase of $500",
+            "coupon_type": "amount"
+         },
+         {
+            "coupon_code": "FREEDELIVERY",
+            "description": "Free delivery on orders above $150",
+            "expiry_date": "2025-03-31",
+            "condition": "Valid only for standard delivery",
+            "coupon_type": "shipping"
+         },
+         {
+            "coupon_code": "HOME25",
+            "description": "25% off on selected home essentials",
+            "expiry_date": "2024-12-25",
+            "condition": "Valid on selected products only",
+            "coupon_type": "percentage"
          }
       ],
       "shop_Link": "https://homeessentials.com",
@@ -114,7 +212,7 @@
       "isSaleOn": true
    },
    {
-      "_id": "mn8#d*l%",
+      "_id": "LaSkDmFn",
       "brand_name": "BabyWorld",
       "rating": 4.8,
       "description": "Baby products and essentials at discounted rates.",
@@ -126,6 +224,27 @@
             "expiry_date": "2024-12-05",
             "condition": "No minimum order",
             "coupon_type": "percentage"
+         },
+         {
+            "coupon_code": "TOYS15",
+            "description": "15% off on toys and games",
+            "expiry_date": "2025-01-10",
+            "condition": "No minimum order",
+            "coupon_type": "percentage"
+         },
+         {
+            "coupon_code": "BABYSHIP",
+            "description": "Free shipping on orders above $50",
+            "expiry_date": "2025-02-28",
+            "condition": "Valid on standard shipping only",
+            "coupon_type": "shipping"
+         },
+         {
+            "coupon_code": "NEWBORN20",
+            "description": "20% off on newborn essentials",
+            "expiry_date": "2024-12-25",
+            "condition": "Valid on selected items",
+            "coupon_type": "percentage"
          }
       ],
       "shop_Link": "https://babyworld.com",
@@ -133,7 +252,7 @@
       "isSaleOn": true
    },
    {
-      "_id": "g^9k%8$h",
+      "_id": "ErTyUiOp",
       "brand_name": "OutdoorHub",
       "rating": 4.0,
       "description": "Top products for outdoor enthusiasts.",
@@ -152,7 +271,7 @@
       "isSaleOn": false
    },
    {
-      "_id": "f7&2*m#%",
+      "_id": "GhJkLmNq",
       "brand_name": "PetPal",
       "rating": 4.3,
       "description": "Everything for your furry friends.",
@@ -164,6 +283,13 @@
             "expiry_date": "2024-12-25",
             "condition": "Minimum purchase of $30",
             "coupon_type": "percentage"
+         },
+         {
+            "coupon_code": "FURRY10",
+            "description": "10% off on all pet food items",
+            "expiry_date": "2025-01-15",
+            "condition": "No minimum order required",
+            "coupon_type": "percentage"
          }
       ],
       "shop_Link": "https://petpal.com",
@@ -171,7 +297,7 @@
       "isSaleOn": true
    },
    {
-      "_id": "d8l@j6#z",
+      "_id": "BaNsCrJt",
       "brand_name": "FitnessPro",
       "rating": 4.5,
       "description": "All you need for fitness and health.",
@@ -183,6 +309,20 @@
             "expiry_date": "2024-12-10",
             "condition": "Minimum purchase of $100",
             "coupon_type": "percentage"
+         },
+         {
+            "coupon_code": "HEALTH15",
+            "description": "15% off on health supplements",
+            "expiry_date": "2025-01-05",
+            "condition": "No minimum purchase required",
+            "coupon_type": "percentage"
+         },
+         {
+            "coupon_code": "FREEDELIVERY",
+            "description": "Free delivery on orders above $75",
+            "expiry_date": "2025-02-28",
+            "condition": "Valid only for standard shipping",
+            "coupon_type": "shipping"
          }
       ],
       "shop_Link": "https://fitnesspro.com",
@@ -190,7 +330,7 @@
       "isSaleOn": true
    },
    {
-      "_id": "4d&9!j2l",
+      "_id": "TrWxVyUb",
       "brand_name": "GreenGarden",
       "rating": 4.3,
       "description": "Quality garden products at best prices.",
@@ -209,7 +349,7 @@
       "isSaleOn": false
    },
    {
-      "_id": "z@8t!w2*",
+      "_id": "LpQzArFd",
       "brand_name": "TechTrend",
       "rating": 4.6,
       "description": "Latest tech gadgets and more.",
@@ -221,6 +361,13 @@
             "expiry_date": "2024-11-29",
             "condition": "Minimum order of $150",
             "coupon_type": "percentage"
+         },
+         {
+            "coupon_code": "GADGETS10",
+            "description": "10% off on accessories with any gadget purchase",
+            "expiry_date": "2025-01-20",
+            "condition": "Applicable on accessories only",
+            "coupon_type": "percentage"
          }
       ],
       "shop_Link": "https://techtrend.com",
@@ -228,7 +375,7 @@
       "isSaleOn": true
    },
    {
-      "_id": "d3*l$8@x",
+      "_id": "NsFbGkHj",
       "brand_name": "ClothCastle",
       "rating": 4.4,
       "description": "Trendy clothes at affordable prices.",
@@ -239,6 +386,27 @@
             "description": "20% off on all clothing",
             "expiry_date": "2024-12-15",
             "condition": "Minimum order of $75",
+            "coupon_type": "percentage"
+         },
+         {
+            "coupon_code": "CASTLE10",
+            "description": "10% off on orders above $50",
+            "expiry_date": "2024-12-31",
+            "condition": "No minimum purchase required",
+            "coupon_type": "percentage"
+         },
+         {
+            "coupon_code": "FREESHIP",
+            "description": "Free shipping on all orders above $100",
+            "expiry_date": "2025-01-10",
+            "condition": "Valid on standard shipping only",
+            "coupon_type": "shipping"
+         },
+         {
+            "coupon_code": "WINTER15",
+            "description": "15% off on winter collection",
+            "expiry_date": "2025-01-05",
+            "condition": "No minimum purchase required",
             "coupon_type": "percentage"
          }
       ],

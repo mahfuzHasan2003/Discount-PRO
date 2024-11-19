@@ -7,6 +7,7 @@ import Login from "../components/Login";
 import Register from "../components/Register";
 import PrivateRoute from "../private route/PrivateRoute";
 import UserProfile from "../pages/UserProfile";
+import BrandDetails from "../pages/BrandDetails";
 
 const routes = createBrowserRouter([
    {
@@ -20,6 +21,14 @@ const routes = createBrowserRouter([
          {
             path: "/brands",
             element: <Brands />,
+         },
+         {
+            path: "/brand/:id",
+            element: (
+               <PrivateRoute>
+                  <BrandDetails />
+               </PrivateRoute>
+            ),
          },
          {
             path: "/profile",
