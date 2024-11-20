@@ -3,7 +3,7 @@ import NavBar from "../components/NavBar";
 
 const Auth = () => {
    return (
-      <div className='w-11/12 max-w-7xl mx-auto'>
+      <div className=''>
          <NavBar />
          <Outlet />
       </div>
