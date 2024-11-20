@@ -6,14 +6,16 @@ import { useContext, useState } from "react";
 import { AuthContext } from "../provider/AuthDataProvider";
 
 const Register = () => {
-   const { registerWithEmail, signInWithGoogle, updateUserProfile } =
-      useContext(AuthContext);
+   const {
+      registerWithEmail,
+      signInWithGoogle,
+      updateUserProfile,
+      isValidEmail,
+      isValidPassword,
+      isValidPhotoURL,
+      isValidName,
+   } = useContext(AuthContext);
    const navigate = useNavigate();
-   const emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
-   const passwordRegex =
-      /^(?=.*[A-Z])(?=.*[a-z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{6,}$/;
-   const isValidEmail = (email) => emailRegex.test(email);
-   const isValidPassword = (password) => passwordRegex.test(password);
 
    const [error, setError] = useState(null);
 
@@ -25,8 +27,16 @@ const Register = () => {
       const photoURL = e.target.photoURL.value;
       const password = e.target.password.value;
       const confirmPassword = e.target.confirmPassword.value;
+      if (!isValidName(name)) {
+         setError("Please provide your full name");
+         return;
+      }
       if (!isValidEmail(email)) {
-         setError("Please enter a valid email");
+         setError("Please provide a valid email");
+         return;
+      }
+      if (!isValidPhotoURL(photoURL)) {
+         setError("Please provide a valid photo URL");
          return;
       }
       if (password !== confirmPassword) {
@@ -35,7 +45,7 @@ const Register = () => {
       }
       if (!isValidPassword(password)) {
          setError(
-            "password must be have at least one upercase character, one lowercase character, one special character, one digit and length 6"
+            "Password must be have at least one upercase character, one lowercase character, one special character, one digit and length 6"
          );
          return;
       }

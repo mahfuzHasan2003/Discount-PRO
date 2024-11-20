@@ -8,6 +8,8 @@ import Register from "../components/Register";
 import PrivateRoute from "../private route/PrivateRoute";
 import UserProfile from "../pages/UserProfile";
 import BrandDetails from "../pages/BrandDetails";
+import UpdateProfile from "../pages/updateProfile";
+import PasswordReset from "../pages/PasswordReset";
 
 const routes = createBrowserRouter([
    {
@@ -30,29 +32,41 @@ const routes = createBrowserRouter([
                </PrivateRoute>
             ),
          },
+      ],
+   },
+   {
+      path: "/auth",
+      element: <Auth />,
+      children: [
          {
-            path: "/profile",
-            element: (
-               <PrivateRoute>
-                  <UserProfile />
-               </PrivateRoute>
-            ),
+            path: "/auth/login",
+            element: <Login />,
          },
          {
-            path: "/auth",
-            element: <Auth />,
-            children: [
-               {
-                  path: "/auth/login",
-                  element: <Login />,
-               },
-               {
-                  path: "/auth/register",
-                  element: <Register />,
-               },
-            ],
+            path: "/auth/register",
+            element: <Register />,
          },
       ],
+   },
+   {
+      path: "/profile",
+      element: (
+         <PrivateRoute>
+            <UserProfile />
+         </PrivateRoute>
+      ),
+   },
+   {
+      path: "/update-profile",
+      element: (
+         <PrivateRoute>
+            <UpdateProfile />
+         </PrivateRoute>
+      ),
+   },
+   {
+      path: "/reset-password",
+      element: <PasswordReset />,
    },
 ]);
 

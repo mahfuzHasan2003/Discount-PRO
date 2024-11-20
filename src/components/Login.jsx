@@ -2,13 +2,19 @@ import { Divider } from "@mui/material";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import googleLogo from "../assets/google.png";
 import "./Divider.css";
-import { useContext, useState } from "react";
+import { useContext, useRef, useState } from "react";
 import { AuthContext } from "../provider/AuthDataProvider";
 
 const Login = () => {
    const [error, setError] = useState(null);
-   const { signInWithEmail, signInWithGoogle } = useContext(AuthContext);
+   const {
+      isValidEmail,
+      signInWithEmail,
+      signInWithGoogle,
+      setEmailForForgotPassword,
+   } = useContext(AuthContext);
    const { state } = useLocation();
+   const emailRef = useRef();
 
    const userDestination = state || "/";
    const navigate = useNavigate();
@@ -18,7 +24,7 @@ const Login = () => {
       setError(null);
       const email = e.target.email.value;
       const password = e.target.password.value;
-      if (!email) {
+      if (!isValidEmail) {
          setError("please enter a valid email");
          return;
       }
@@ -49,6 +55,7 @@ const Login = () => {
                name='email'
                placeholder='Email'
                className='bg-transparent placeholder-inherit border border-gray-800 w-full p-2 rounded-sm outline-brown'
+               ref={emailRef}
             />
             <input
                type='password'
@@ -57,7 +64,13 @@ const Login = () => {
                className='bg-transparent placeholder-inherit border border-gray-800 w-full p-2 rounded-sm outline-brown'
             />
             <p className='text-right text-blue-700 underline font-medium'>
-               <Link to=''>forgot password?</Link>
+               <Link
+                  to='/reset-password'
+                  onClick={() =>
+                     setEmailForForgotPassword(emailRef.current.value)
+                  }>
+                  forgot password?
+               </Link>
             </p>
             <input
                type='submit'
