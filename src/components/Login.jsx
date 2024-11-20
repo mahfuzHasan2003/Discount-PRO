@@ -4,7 +4,6 @@ import googleLogo from "../assets/google.png";
 import "./Divider.css";
 import { useContext, useRef, useState } from "react";
 import { AuthContext } from "../provider/AuthDataProvider";
-import { FaRegEye } from "react-icons/fa";
 import { IoMdEye, IoMdEyeOff } from "react-icons/io";
 
 const Login = () => {

@@ -1,4 +1,5 @@
 import BrandsOnSell from "../components/BrandsOnSell";
+import Newsletter from "../components/Newsletter";
 import TopBannerSlider from "../components/TopBannerSlider";
 import TopBrands from "../components/TopBrands";
 
@@ -8,6 +9,7 @@ const Home = () => {
          <TopBannerSlider />
          <TopBrands />
          <BrandsOnSell />
+         <Newsletter />
       </div>
    );
 };

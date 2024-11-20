@@ -10,6 +10,7 @@ import UserProfile from "../pages/UserProfile";
 import BrandDetails from "../pages/BrandDetails";
 import UpdateProfile from "../pages/updateProfile";
 import PasswordReset from "../pages/PasswordReset";
+import ErrorPage from "../pages/ErrorPage";
 
 const routes = createBrowserRouter([
    {
@@ -67,6 +68,10 @@ const routes = createBrowserRouter([
    {
       path: "/reset-password",
       element: <PasswordReset />,
+   },
+   {
+      path: "*",
+      element: <ErrorPage />,
    },
 ]);
 

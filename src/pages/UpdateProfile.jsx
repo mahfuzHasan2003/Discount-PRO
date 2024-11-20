@@ -1,4 +1,4 @@
-import { useContext, useEffect, useState } from "react";
+import { useContext, useState } from "react";
 import NavBar from "../components/NavBar";
 import { AuthContext } from "../provider/AuthDataProvider";
 import toast from "react-hot-toast";
