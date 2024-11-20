@@ -1,5 +1,11 @@
 import { useContext, useState } from "react";
-import { FaBars, FaHome, FaTags, FaUser } from "react-icons/fa";
+import {
+   FaBars,
+   FaHome,
+   FaQuestionCircle,
+   FaTags,
+   FaUser,
+} from "react-icons/fa";
 import { Link, NavLink } from "react-router-dom";
 import Drawer from "react-modern-drawer";
 import "react-modern-drawer/dist/index.css";
@@ -27,6 +33,9 @@ const NavBar = () => {
             </NavLink>
             <NavLink to='/brands' className='flex items-center space-x-1'>
                <FaTags /> <span>Brands</span>
+            </NavLink>
+            <NavLink to='/faq' className='flex items-center space-x-1'>
+               <FaQuestionCircle /> <span>FAQ's</span>
             </NavLink>
             {user ? (
                <NavLink to='/profile' className='flex items-center space-x-1'>
@@ -105,7 +114,7 @@ const NavBar = () => {
                      </div>
                   )}
 
-                  <div className='space-y-3'>
+                  <div className='space-y-3' id='nav-links-mobile'>
                      <NavLink
                         to='/'
                         onClick={toggleDrawer}
@@ -117,6 +126,12 @@ const NavBar = () => {
                         onClick={toggleDrawer}
                         className='flex items-center gap-2 space-x-1 text-xl'>
                         <FaTags /> <span>Brands</span>
+                     </NavLink>
+                     <NavLink
+                        to='/faq'
+                        onClick={toggleDrawer}
+                        className='flex items-center gap-2 space-x-1 text-xl'>
+                        <FaQuestionCircle /> <span>FAQ's</span>
                      </NavLink>
 
                      {user ? (

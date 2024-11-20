@@ -11,6 +11,8 @@ import BrandDetails from "../pages/BrandDetails";
 import UpdateProfile from "../pages/updateProfile";
 import PasswordReset from "../pages/PasswordReset";
 import ErrorPage from "../pages/ErrorPage";
+import FAQPage from "../pages/FAQPage";
+import axios from "axios";
 
 const routes = createBrowserRouter([
    {
@@ -48,6 +50,14 @@ const routes = createBrowserRouter([
             element: <Register />,
          },
       ],
+   },
+   {
+      path: "/faq",
+      element: <FAQPage />,
+      loader: async () => {
+         const res = await axios.get("/faqData.json");
+         return res.data.faqs;
+      },
    },
    {
       path: "/profile",

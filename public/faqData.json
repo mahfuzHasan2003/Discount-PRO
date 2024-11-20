@@ -1,0 +1,29 @@
+{
+   "faqs": [
+      {
+         "id": 1,
+         "question": "What is Discount PRO, and how does it work?",
+         "answer": "Discount PRO is a coupon-collecting application designed to help users find and use discount coupons for popular e-commerce stores in Bangladesh. We gather all the latest coupons and deals from various stores and organize them in one place, making it easy for users to access and save money on their purchases."
+      },
+      {
+         "id": 2,
+         "question": "Are the coupons listed on Discount PRO always valid?",
+         "answer": "We strive to ensure all listed coupons are up-to-date and valid. Each coupon includes an expiry date and terms of use to guide users. However, availability may vary depending on the store's terms and conditions."
+      },
+      {
+         "id": 3,
+         "question": "Do I need to pay to use Discount PRO?",
+         "answer": "No, Discount PRO is completely free to use. Our goal is to make saving money accessible to everyone by providing a centralized platform for coupons and deals."
+      },
+      {
+         "id": 4,
+         "question": "Can I submit a coupon or deal I found elsewhere?",
+         "answer": "Yes! If you discover a coupon or deal that's not listed on Discount PRO, you can submit it through our 'Submit a Coupon' feature. After verifying its authenticity, we’ll include it in our collection."
+      },
+      {
+         "id": 5,
+         "question": "How can I use a coupon listed on Discount PRO?",
+         "answer": "Each coupon listed has a 'Use Now' button that redirects you to the e-commerce store where the coupon is applicable. Copy the coupon code and paste it during checkout to avail of the discount."
+      }
+   ]
+}
