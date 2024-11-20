@@ -24,15 +24,15 @@ const routes = createBrowserRouter([
             path: "/brands",
             element: <Brands />,
          },
-         {
-            path: "/brand/:id",
-            element: (
-               <PrivateRoute>
-                  <BrandDetails />
-               </PrivateRoute>
-            ),
-         },
       ],
+   },
+   {
+      path: "/brand/:id",
+      element: (
+         <PrivateRoute>
+            <BrandDetails />
+         </PrivateRoute>
+      ),
    },
    {
       path: "/auth",

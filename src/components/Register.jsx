@@ -4,6 +4,7 @@ import googleLogo from "../assets/google.png";
 import { Link, useNavigate } from "react-router-dom";
 import { useContext, useState } from "react";
 import { AuthContext } from "../provider/AuthDataProvider";
+import { IoMdEye, IoMdEyeOff } from "react-icons/io";
 
 const Register = () => {
    const {
@@ -18,6 +19,8 @@ const Register = () => {
    const navigate = useNavigate();
 
    const [error, setError] = useState(null);
+   const [showPass, setShowPass] = useState(false);
+   const [showConPass, setShowConPass] = useState(false);
 
    const handleRegister = (e) => {
       e.preventDefault();
@@ -69,7 +72,7 @@ const Register = () => {
          <h2 className='text-2xl md:text-3xl font-bold text-center mb-10 rounded-sm'>
             Register
          </h2>
-         <form className='space-y-3' onSubmit={handleRegister}>
+         <form className='space-y-3 relative' onSubmit={handleRegister}>
             <input
                type='text'
                name='name'
@@ -88,18 +91,44 @@ const Register = () => {
                placeholder='Photo-URL'
                className='bg-transparent placeholder-inherit border border-gray-800 w-full p-2 rounded-sm outline-brown'
             />
-            <input
-               type='password'
-               name='password'
-               placeholder='Password'
-               className='bg-transparent placeholder-inherit border border-gray-800 w-full p-2 rounded-sm outline-brown'
-            />
-            <input
-               type='password'
-               name='confirmPassword'
-               placeholder='Confirm Password'
-               className='bg-transparent placeholder-inherit border border-gray-800 w-full p-2 rounded-sm outline-brown'
-            />
+            <div className='relative'>
+               <input
+                  type={showPass ? "text" : "password"}
+                  name='password'
+                  placeholder='Password'
+                  className='bg-transparent placeholder-inherit border border-gray-800 w-full p-2 rounded-sm outline-brown'
+               />
+               {showPass ? (
+                  <IoMdEye
+                     className='absolute right-5 top-1/2 -translate-y-1/2 cursor-pointer'
+                     onClick={() => setShowPass((prev) => !prev)}
+                  />
+               ) : (
+                  <IoMdEyeOff
+                     className='absolute right-5 top-1/2 -translate-y-1/2 cursor-pointer'
+                     onClick={() => setShowPass((prev) => !prev)}
+                  />
+               )}
+            </div>
+            <div className='relative'>
+               <input
+                  type={showConPass ? "text" : "password"}
+                  name='confirmPassword'
+                  placeholder='Confirm Password'
+                  className='bg-transparent placeholder-inherit border border-gray-800 w-full p-2 rounded-sm outline-brown'
+               />
+               {showConPass ? (
+                  <IoMdEye
+                     className='absolute right-5 top-1/2 -translate-y-1/2 cursor-pointer'
+                     onClick={() => setShowConPass((prev) => !prev)}
+                  />
+               ) : (
+                  <IoMdEyeOff
+                     className='absolute right-5 top-1/2 -translate-y-1/2 cursor-pointer'
+                     onClick={() => setShowConPass((prev) => !prev)}
+                  />
+               )}
+            </div>
             <input
                type='submit'
                name='submit'
