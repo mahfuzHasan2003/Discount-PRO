@@ -1,8 +1,21 @@
 import { IoMdMailUnread } from "react-icons/io";
+import { useEffect } from "react";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 const Newsletter = () => {
+   useEffect(() => {
+      AOS.init({
+         duration: 1000,
+         once: false,
+         offset: 100,
+      });
+      AOS.refresh();
+   }, []);
    return (
-      <section className='md:flex items-center justify-center mt-10'>
+      <section
+         className='md:flex items-center justify-center mt-10'
+         data-aos='zoom-in-up'>
          <img
             src='https://www.coupons.com/images/256x/newsletter-signup_3_1.png'
             alt='Mail-icon'

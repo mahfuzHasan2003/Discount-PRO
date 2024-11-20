@@ -5,6 +5,7 @@ import { Link, useNavigate } from "react-router-dom";
 import { useContext, useState } from "react";
 import { AuthContext } from "../provider/AuthDataProvider";
 import { IoMdEye, IoMdEyeOff } from "react-icons/io";
+import { Helmet } from "react-helmet";
 
 const Register = () => {
    const {
@@ -69,6 +70,9 @@ const Register = () => {
 
    return (
       <div className='w-11/12 max-w-xl mx-auto mt-20 border shadow-sm px-5 py-10 md:px-10 md:py-16 bg-gray-50 space-y-3'>
+         <Helmet>
+            <title>Discount Pro | Register</title>
+         </Helmet>
          <h2 className='text-2xl md:text-3xl font-bold text-center mb-10 rounded-sm'>
             Register
          </h2>

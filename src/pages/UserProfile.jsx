@@ -2,6 +2,7 @@ import { useContext } from "react";
 import { AuthContext } from "../provider/AuthDataProvider";
 import { Link, useNavigate } from "react-router-dom";
 import NavBar from "../components/NavBar";
+import { Helmet } from "react-helmet";
 
 const UserProfile = () => {
    const navigate = useNavigate();
@@ -13,6 +14,9 @@ const UserProfile = () => {
    };
    return (
       <>
+         <Helmet>
+            <title>Discount Pro | Profile</title>
+         </Helmet>
          <NavBar />
          <div className='w-11/12 max-w-7xl mx-auto mt-5'>
             <div className='text-right mb-5 animate__animated animate__fadeIn'>

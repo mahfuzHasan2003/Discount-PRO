@@ -2,6 +2,7 @@ import { Accordion, AccordionItem as Item } from "@szhsin/react-accordion";
 import NavBar from "../components/NavBar";
 import { useLoaderData } from "react-router-dom";
 import { IoIosArrowDown } from "react-icons/io";
+import { Helmet } from "react-helmet";
 
 const AccordionItem = ({ header, ...rest }) => (
    <Item
@@ -34,6 +35,9 @@ const FAQPage = () => {
    const faqData = useLoaderData();
    return (
       <div>
+         <Helmet>
+            <title>Discount Pro | FAQ's</title>
+         </Helmet>
          <NavBar />
          <Accordion className='w-11/12 max-w-7xl mx-auto mt-10'>
             {faqData.map((singleFAQ) => (

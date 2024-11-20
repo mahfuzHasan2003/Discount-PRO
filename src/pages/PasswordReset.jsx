@@ -2,6 +2,7 @@ import { useContext, useRef } from "react";
 import NavBar from "../components/NavBar";
 import { AuthContext } from "../provider/AuthDataProvider";
 import { useNavigate } from "react-router-dom";
+import { Helmet } from "react-helmet";
 
 const PasswordReset = () => {
    const {
@@ -35,6 +36,9 @@ const PasswordReset = () => {
 
    return (
       <div>
+         <Helmet>
+            <title>Discount Pro | Reset Password</title>
+         </Helmet>
          <NavBar />
          <div className='w-11/12 max-w-7xl mx-auto mt-20 bg-gray-50 space-y-3'>
             <div className='max-w-xl px-5 py-10 md:px-10 md:py-16'>

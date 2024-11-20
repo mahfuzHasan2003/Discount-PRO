@@ -2,11 +2,15 @@ import { useContext } from "react";
 import { BrandsContext } from "../provider/BrandsDataProvider";
 import SingleBrand from "../components/SingleBrand";
 import { IoSearch } from "react-icons/io5";
+import { Helmet } from "react-helmet";
 
 const Brands = () => {
    const { allBrandsData } = useContext(BrandsContext);
    return (
       <div className='w-11/12 max-w-7xl mx-auto my-10 space-y-7'>
+         <Helmet>
+            <title>Discount Pro | All Brands</title>
+         </Helmet>
          <div className='md:flex justify-between items-center'>
             <h2 className='text-2xl md:text-3xl font-bold'>
                All Your Favorite Brands

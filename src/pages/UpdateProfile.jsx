@@ -3,6 +3,7 @@ import NavBar from "../components/NavBar";
 import { AuthContext } from "../provider/AuthDataProvider";
 import toast from "react-hot-toast";
 import { useNavigate } from "react-router-dom";
+import { Helmet } from "react-helmet";
 
 const UpdateProfile = () => {
    const navigate = useNavigate();
@@ -42,6 +43,9 @@ const UpdateProfile = () => {
    };
    return (
       <div>
+         <Helmet>
+            <title>Discount Pro | Update Profile</title>
+         </Helmet>
          <NavBar />
          <div className='w-11/12 max-w-7xl mx-auto mt-20 bg-gray-50 space-y-3'>
             <div className='max-w-xl px-5 py-10 md:px-10 md:py-16'>

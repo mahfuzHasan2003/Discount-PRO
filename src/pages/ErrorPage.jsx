@@ -1,9 +1,13 @@
+import { Helmet } from "react-helmet";
 import { MdError } from "react-icons/md";
 import { Link } from "react-router-dom";
 
 const ErrorPage = () => {
    return (
       <div className='h-dvh grid place-items-center bg-orange-50'>
+         <Helmet>
+            <title>Discount Pro | Error 404</title>
+         </Helmet>
          <div className='text-center space-y-1 md:space-y-3 animate__animated animate__zoomIn'>
             <h1 className='font-black text-5xl md:text-7xl flex items-center gap-1 justify-center text-gray-800'>
                4 <MdError className='text-red-700' />
