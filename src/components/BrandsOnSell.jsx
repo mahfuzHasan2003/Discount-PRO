@@ -1,6 +1,6 @@
 import { useContext } from "react";
 import { BrandsContext } from "../provider/BrandsDataProvider";
-import BrandOnSaleCard from "./BrandOnSaleCard";
+import Card from "./Card";
 
 const BrandsOnSell = () => {
    const { isSaleOn } = useContext(BrandsContext);
@@ -9,7 +9,7 @@ const BrandsOnSell = () => {
          <h2 className='text-2xl md:text-3xl font-bold'>Brands on Sell</h2>
          <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5'>
             {isSaleOn.map((brand) => (
-               <BrandOnSaleCard key={brand._id} brand={brand} />
+               <Card key={brand._id} brand={brand} />
             ))}
          </div>
       </section>

@@ -3,6 +3,7 @@ import BrandsOnSell from "../components/BrandsOnSell";
 import Newsletter from "../components/Newsletter";
 import TopBannerSlider from "../components/TopBannerSlider";
 import TopBrands from "../components/TopBrands";
+import TopRated from "../components/TopRated";
 
 const Home = () => {
    return (
@@ -13,6 +14,7 @@ const Home = () => {
          <TopBannerSlider />
          <TopBrands />
          <BrandsOnSell />
+         <TopRated />
          <Newsletter />
       </div>
    );

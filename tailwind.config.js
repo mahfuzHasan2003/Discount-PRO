@@ -8,7 +8,6 @@ export default {
             "brown-dark": "#7a1f1f",
          },
          fontFamily: {
-            Montserrat: "'Montserrat', 'sans-serif'",
             Playwrite: "'Playwrite BE VLG', 'cursive'",
          },
       },
