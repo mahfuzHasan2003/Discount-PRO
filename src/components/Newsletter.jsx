@@ -30,7 +30,7 @@ const Newsletter = () => {
             <div className='flex'>
                <input
                   type='email'
-                  className='border border-brown outline-none px-3 py-1 rounded-s-sm'
+                  className='border border-brown outline-none px-3 py-1 rounded-s-sm min-w-0'
                />
                <button className='inline-flex items-center gap-2 bg-brown text-white font-semibold hover:bg-brown-dark px-3 py-1 rounded-e-sm text-lg border-brown'>
                   <IoMdMailUnread />
