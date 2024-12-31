@@ -51,6 +51,7 @@ const NavBar = () => {
                   <Link to='/profile'>
                      <img
                         src={user.photoURL}
+                        referrerPolicy='no-referrer'
                         alt='profile photo'
                         className='w-12 aspect-square object-cover rounded-full'
                      />

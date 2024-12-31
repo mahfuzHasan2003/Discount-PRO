@@ -36,6 +36,7 @@ const UserProfile = () => {
                   />
                   <img
                      src={photoURL}
+                     referrerPolicy='no-referrer'
                      alt='User Photo'
                      className='w-44 md:w-60 aspect-square object-cover rounded-full border-4 border-gray-100 absolute -bottom-[5.5rem] md:-bottom-[7.5rem] left-1/2 -translate-x-1/2'
                   />
